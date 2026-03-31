@@ -15,9 +15,20 @@ const PortfolioCard = ({ project, delay = 0 }) => {
           className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-          <span className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium inline-flex items-center gap-2">
-            {t('portfolio.view_project')} <ExternalLink className="w-4 h-4" />
-          </span>
+          {project.url ? (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium inline-flex items-center gap-2 transition-colors"
+            >
+              {t('portfolio.view_project')} <ExternalLink className="w-4 h-4" />
+            </a>
+          ) : (
+            <span className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium inline-flex items-center gap-2">
+              {t('portfolio.view_project')} <ExternalLink className="w-4 h-4" />
+            </span>
+          )}
         </div>
       </div>
       <div className="p-6">

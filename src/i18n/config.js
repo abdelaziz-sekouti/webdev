@@ -41,7 +41,7 @@ i18n
 
 // Handle RTL for Arabic
 i18n.on('languageChanged', (lng) => {
-  document.documentElement.dir = lng === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.dir = lng === 'ar' ? 'ltr' : 'ltr';
   document.documentElement.lang = lng;
 });
 

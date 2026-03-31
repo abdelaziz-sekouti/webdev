@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import ScrollToTop from '../components/ScrollToTop';
+import SocialSidebar from '../components/SocialSidebar';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const AppLayout = ({ children }) => {
@@ -21,6 +22,7 @@ const AppLayout = ({ children }) => {
       <Footer />
       <WhatsAppButton />
       <ScrollToTop />
+      <SocialSidebar />
     </div>
   );
 };

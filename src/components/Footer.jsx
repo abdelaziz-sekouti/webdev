@@ -1,6 +1,27 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Github, Youtube, Instagram } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+
+const socialLinks = [
+  {
+    name: 'GitHub',
+    href: 'https://github.com/abdelaziz-sekouti?tab=repositories',
+    bgColor: 'hover:bg-[#333]',
+    textColor: 'text-[#333]',
+  },
+  {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/@autodidactewebdev2368',
+    bgColor: 'hover:bg-[#FF0000]',
+    textColor: 'text-[#FF0000]',
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/sekoutiabdelaziz/',
+    bgColor: 'hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500',
+    textColor: 'text-[#E4405F]',
+  },
+];
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -20,34 +41,21 @@ const Footer = () => {
             <p className="text-slate-400 mb-6 max-w-md">
               {t('footer.tagline')}
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-slate-800 hover:bg-blue-600 rounded-lg transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.instagram.com/sekoutiabdelaziz/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-slate-800 hover:bg-blue-600 rounded-lg transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-slate-800 hover:bg-blue-600 rounded-lg transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
+            <div className="flex gap-3">
+              {socialLinks.map(({ name, href, bgColor, textColor }) => (
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={name}
+                  className={`group p-2.5 rounded-lg bg-slate-800 text-slate-400 ${bgColor} transition-all duration-300 hover:text-white hover:scale-110 hover:shadow-lg`}
+                >
+                  {name === 'GitHub' && <Github className="w-5 h-5" />}
+                  {name === 'YouTube' && <Youtube className="w-5 h-5" />}
+                  {name === 'Instagram' && <Instagram className="w-5 h-5" />}
+                </a>
+              ))}
             </div>
           </div>
 
