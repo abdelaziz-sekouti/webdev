@@ -1,25 +1,27 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Github, Youtube, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Github, Youtube, Instagram, Facebook } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const socialLinks = [
   {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/devwebmaroc',
+    bgColor: 'hover:bg-[#1877F2]',
+  },
+  {
     name: 'GitHub',
     href: 'https://github.com/abdelaziz-sekouti?tab=repositories',
     bgColor: 'hover:bg-[#333]',
-    textColor: 'text-[#333]',
   },
   {
     name: 'YouTube',
     href: 'https://www.youtube.com/@autodidactewebdev2368',
     bgColor: 'hover:bg-[#FF0000]',
-    textColor: 'text-[#FF0000]',
   },
   {
     name: 'Instagram',
     href: 'https://www.instagram.com/sekoutiabdelaziz/',
     bgColor: 'hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500',
-    textColor: 'text-[#E4405F]',
   },
 ];
 
@@ -51,6 +53,7 @@ const Footer = () => {
                   aria-label={name}
                   className={`group p-2.5 rounded-lg bg-slate-800 text-slate-400 ${bgColor} transition-all duration-300 hover:text-white hover:scale-110 hover:shadow-lg`}
                 >
+                  {name === 'Facebook' && <Facebook className="w-5 h-5" />}
                   {name === 'GitHub' && <Github className="w-5 h-5" />}
                   {name === 'YouTube' && <Youtube className="w-5 h-5" />}
                   {name === 'Instagram' && <Instagram className="w-5 h-5" />}

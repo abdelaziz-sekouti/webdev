@@ -1,7 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Github, Youtube, Instagram } from 'lucide-react';
+import { Github, Youtube, Instagram, Facebook } from 'lucide-react';
 
 const socialLinks = [
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/devwebmaroc',
+    Icon: Facebook,
+    color: 'hover:text-white',
+    bgHover: 'hover:bg-[#1877F2]',
+  },
   {
     name: 'GitHub',
     href: 'https://github.com/abdelaziz-sekouti?tab=repositories',
