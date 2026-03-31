@@ -1,12 +1,11 @@
 import { ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-const PortfolioCard = ({ project, delay = 0 }) => {
+const PortfolioCard = ({ project }) => {
   const { t } = useTranslation();
   return (
     <div 
-      className="animate-on-scroll group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-700"
-      style={{ transitionDelay: `${delay}ms` }}
+      className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
     >
       <div className="relative overflow-hidden">
         <img

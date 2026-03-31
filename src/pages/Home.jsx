@@ -1,5 +1,6 @@
 import Hero from '../sections/Hero';
 import Problem from '../sections/Problem';
+import ParallaxSection from '../sections/ParallaxSection';
 import Solution from '../sections/Solution';
 import ServicesPreview from '../sections/ServicesPreview';
 import Offer from '../sections/Offer';
@@ -11,6 +12,7 @@ const Home = () => {
     <>
       <Hero />
       <Problem />
+      <ParallaxSection />
       <Solution />
       <ServicesPreview />
       <Offer />

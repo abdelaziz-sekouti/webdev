@@ -37,6 +37,9 @@ i18n
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
     },
+    react: {
+      useSuspense: false,
+    },
   });
 
 // Handle RTL for Arabic
