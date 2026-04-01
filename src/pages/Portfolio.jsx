@@ -28,7 +28,7 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
     tags: ["Immobilier", "Recherche", "Filtres"],
     category: "immobilier",
-    url: "https://premium-website-chi.vercel.app/"
+    url: "https://premium-website-nine.vercel.app/"
   },
   {
     id: 4,
@@ -63,8 +63,8 @@ const Portfolio = () => {
   const { t } = useTranslation();
   const [filter, setFilter] = useState('all');
 
-  const filteredProjects = filter === 'all' 
-    ? projectsData 
+  const filteredProjects = filter === 'all'
+    ? projectsData
     : projectsData.filter(project => project.category === filter);
 
   return (
@@ -87,77 +87,70 @@ const Portfolio = () => {
           <div className="flex flex-wrap justify-center gap-3 animate-on-scroll">
             <button
               type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${
-                filter === 'all'
+              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'all'
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-              }`}
+                }`}
               onClick={() => setFilter('all')}
             >
               {t('portfolio.filter_all')}
             </button>
             <button
               type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${
-                filter === 'e-commerce'
+              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'e-commerce'
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-              }`}
+                }`}
               onClick={() => setFilter('e-commerce')}
             >
               {t('portfolio.filter_ecommerce')}
             </button>
             <button
               type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${
-                filter === 'restaurant'
+              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'restaurant'
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-              }`}
+                }`}
               onClick={() => setFilter('restaurant')}
             >
               {t('portfolio.filter_restaurant')}
             </button>
             <button
               type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${
-                filter === 'immobilier'
+              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'immobilier'
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-              }`}
+                }`}
               onClick={() => setFilter('immobilier')}
             >
               {t('portfolio.filter_immobilier')}
             </button>
             <button
               type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${
-                filter === 'landing'
+              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'landing'
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-              }`}
+                }`}
               onClick={() => setFilter('landing')}
             >
               {t('portfolio.filter_landing')}
             </button>
             <button
               type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${
-                filter === 'sante'
+              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'sante'
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-              }`}
+                }`}
               onClick={() => setFilter('sante')}
             >
               {t('portfolio.filter_sante')}
             </button>
             <button
               type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${
-                filter === 'autre'
+              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'autre'
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-              }`}
+                }`}
               onClick={() => setFilter('autre')}
             >
               {t('portfolio.filter_autre')}
