@@ -1,9 +1,0 @@
-{
-    "redirects": [
-        {
-            "source": "https://webdev-theta-gray.vercel.app/*",
-            "destination": "https://webdev-theta-gray.vercel.app/",
-            "permanent": true
-        }
-    ]
-}
