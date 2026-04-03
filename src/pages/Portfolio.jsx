@@ -28,7 +28,7 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
     tags: ["Immobilier", "Recherche", "Filtres"],
     category: "immobilier",
-    url: "https://premium-website-nine.vercel.app/"
+    url: "https://agence-immobiliere-bice.vercel.app//"
   },
   {
     id: 4,
