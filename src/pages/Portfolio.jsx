@@ -56,7 +56,165 @@ const projectsData = [
     tags: ["Santé", "Rendez-vous", "Médical"],
     category: "sante",
     url: "https://dr-luxe.vercel.app/"
+  },
+  ,
+  {
+    "id": 7,
+    "title": "Agence de Voyage Sahara",
+    "description": "Site de réservation pour une agence de voyage spécialisée dans les circuits au Sahara.",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop",
+    "tags": [
+      "Voyage",
+      "Réservation",
+      "Tourisme"
+    ],
+    "category": "voyage",
+    "url": "https://sahara-travel.vercel.app/"
+  },
+  {
+    "id": 8,
+    "title": "Blog Lifestyle",
+    "description": "Blog personnel sur le lifestyle avec articles, galerie photo et section de commentaires.",
+    "image": "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?w=600&h=400&fit=crop",
+    "tags": [
+      "Blog",
+      "Lifestyle",
+      "Articles"
+    ],
+    "category": "blog",
+    "url": "https://lifestyle-blog.vercel.app/"
+  },
+  {
+    "id": 9,
+    "title": "Portfolio Artiste",
+    "description": "Site de portfolio pour un artiste avec galerie d'œuvres, biographie et contact.",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop",
+    "tags": [
+      "Portfolio",
+      "Artiste",
+      "Galerie"
+    ],
+    "category": "autre",
+    "url": "https://artiste-portfolio.vercel.app/"
+  },
+  {
+    "id": 10,
+    "title": "Application de Fitness",
+    "description": "Application web pour suivre les entraînements et la nutrition avec interface conviviale.",
+    "image": "https://images.unsplash.com/photo-1554284126-1e0c9b1d8b9c?w=600&h=400&fit=crop",
+    "tags": [
+      "Fitness",
+      "Nutrition",
+      "Suivi"
+    ],
+    "category": "sante",
+    "url": "https://fitness-app.vercel.app/"
+  },
+  {
+    "id": 11,
+    "title": "Site de Photographie",
+    "description": "Site pour un photographe professionnel avec portfolio, tarifs et formulaire de contact.",
+    "image": "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=600&h=400&fit=crop",
+    "tags": [
+      "Photographie",
+      "Portfolio",
+      "Contact"
+    ],
+    "category": "autre",
+    "url": "https://photography-site.vercel.app/"
+  },
+  {
+    "id": 12,
+    "title": "Application de Recettes",
+    "description": "Application web pour partager et découvrir des recettes de cuisine avec fonctionnalités sociales.",
+    "image": "https://images.unsplash.com/photo-1512058564366-c9e9c1d8b9c8?w=600&h=400&fit=crop",
+    "tags": [
+      "Recettes",
+      "Cuisine",
+      "Social"
+    ],
+    "category": "autre",
+    "url": "https://recipe-app.vercel.app/"
+  },
+  {
+    "id": 13,
+    "title": "Site de Yoga en Ligne",
+    "description": "Plateforme de cours de yoga en ligne avec vidéos, horaires et abonnement.",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop",
+    "tags": [
+      "Yoga",
+      "Cours en ligne",
+      "Abonnement"
+    ],
+    "category": "sante",
+    "url": "https://yoga-online.vercel.app/"
+  },
+  {
+    "id": 14,
+    "title": "Site de Musique Indépendante",
+    "description": "Site pour un label de musique indépendante avec catalogue d'artistes, albums et boutique.",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&h=400&fit=crop",
+    "tags": [
+      "Musique",
+      "Indépendante",
+      "Boutique"
+    ],
+    "category": "autre",
+    "url": "https://independent-music.vercel.app/"
+  },
+  {
+    "id": 15,
+    "title": "Application de Gestion de Projets",
+    "description": "Application web pour gérer des projets avec tâches, calendrier et collaboration en équipe.",
+    "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=400&fit=crop",
+    "tags": [
+      "Gestion de projets",
+      "Collaboration",
+      "Productivité"
+    ],
+    "category": "autre",
+    "url": "https://project-management-app.vercel.app/"
+  },
+  {
+    "id": 16,
+    "title": "Site de Mode Durable",
+    "description": "Boutique en ligne pour une marque de mode durable avec produits éco-responsables et blog.",
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&h=400&fit=crop",
+    "tags": [
+      "Mode durable",
+      "E-commerce",
+      "Blog"
+    ],
+    "category": "e-commerce",
+    "url": "https://sustainable-fashion.vercel.app/"
+  },
+  {
+    "id": 17,
+    "title": "Site de Coaching Personnel",
+    "description": "Site pour un coach personnel avec présentation des services, témoignages et prise de rendez-vous.",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop",
+    "tags": [
+      "Coaching",
+      "Personnel",
+      "Rendez-vous"
+    ],
+    "category": "autre",
+    "url": "https://personal-coaching.vercel.app/"
+  },
+  {
+    "id": 18,
+    "title": "Application de Méditation",
+    "description": "Application web pour la méditation avec sessions guidées, suivi de progrès et communauté.",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop",
+    "tags": [
+      "Méditation",
+      "Bien-être",
+      "Communauté"
+    ],
+    "category": "sante",
+    "url": "https://meditation-app.vercel.app/"
   }
+
 ];
 
 const Portfolio = () => {
