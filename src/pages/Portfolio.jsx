@@ -15,7 +15,7 @@ const projectsData = [
   {
     id: 2,
     title: "Restaurant Dar Essalam",
-    description: "Site vitrine elegant pour un restaurant traditionnel à Marrakech avec réservation en ligne.",
+    description: "Site vitrine elegent pour un restaurant traditionnel à Marrakech avec réservation en ligne.",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
     tags: ["Restaurant", "Réservation", "SEO"],
     category: "restaurant",
@@ -57,7 +57,6 @@ const projectsData = [
     category: "sante",
     url: "https://dr-luxe.vercel.app/"
   },
-  ,
   {
     "id": 7,
     "title": "Agence de Voyage Sahara",
@@ -101,7 +100,7 @@ const projectsData = [
     "id": 10,
     "title": "Application de Fitness",
     "description": "Application web pour suivre les entraînements et la nutrition avec interface conviviale.",
-    "image": "https://images.unsplash.com/photo-1554284126-1e0c9b1d8b9c?w=600&h=400&fit=crop",
+    "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D?w=600&h=400&fit=crop",
     "tags": [
       "Fitness",
       "Nutrition",
@@ -127,7 +126,7 @@ const projectsData = [
     "id": 12,
     "title": "Application de Recettes",
     "description": "Application web pour partager et découvrir des recettes de cuisine avec fonctionnalités sociales.",
-    "image": "https://images.unsplash.com/photo-1512058564366-c9e9c1d8b9c8?w=600&h=400&fit=crop",
+    "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a2l0Y2hlbiUyMGNvb2tpbmd8ZW58MHx8MHx8fDA%3D?w=600&h=400&fit=crop",
     "tags": [
       "Recettes",
       "Cuisine",
@@ -214,16 +213,19 @@ const projectsData = [
     "category": "sante",
     "url": "https://meditation-app.vercel.app/"
   }
-
 ];
 
 const Portfolio = () => {
   const { t } = useTranslation();
   const [filter, setFilter] = useState('all');
+  const [currentPage, setCurrentPage] = useState(0);
+  const pageSize = 6;
 
   const filteredProjects = filter === 'all'
     ? projectsData
     : projectsData.filter(project => project.category === filter);
+  const totalPages = Math.ceil(filteredProjects.length / pageSize);
+  const pagedProjects = filteredProjects.slice(currentPage * pageSize, (currentPage + 1) * pageSize);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-950">
@@ -241,92 +243,120 @@ const Portfolio = () => {
       </section>
 
       <section className="py-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-3 animate-on-scroll">
-            <button
-              type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'all'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-                }`}
-              onClick={() => setFilter('all')}
-            >
-              {t('portfolio.filter_all')}
-            </button>
-            <button
-              type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'e-commerce'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-                }`}
-              onClick={() => setFilter('e-commerce')}
-            >
-              {t('portfolio.filter_ecommerce')}
-            </button>
-            <button
-              type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'restaurant'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-                }`}
-              onClick={() => setFilter('restaurant')}
-            >
-              {t('portfolio.filter_restaurant')}
-            </button>
-            <button
-              type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'immobilier'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-                }`}
-              onClick={() => setFilter('immobilier')}
-            >
-              {t('portfolio.filter_immobilier')}
-            </button>
-            <button
-              type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'landing'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-                }`}
-              onClick={() => setFilter('landing')}
-            >
-              {t('portfolio.filter_landing')}
-            </button>
-            <button
-              type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'sante'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-                }`}
-              onClick={() => setFilter('sante')}
-            >
-              {t('portfolio.filter_sante')}
-            </button>
-            <button
-              type="button"
-              className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'autre'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
-                }`}
-              onClick={() => setFilter('autre')}
-            >
-              {t('portfolio.filter_autre')}
-            </button>
-          </div>
+        <div className="flex flex-wrap justify-center gap-3 animate-on-scroll">
+          <button
+            type="button"
+            className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'all'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
+              }`}
+            onClick={() => setFilter('all')}
+          >
+            {t('portfolio.filter_all')}
+          </button>
+          <button
+            type="button"
+            className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'e-commerce'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
+              }`}
+            onClick={() => setFilter('e-commerce')}
+          >
+            {t('portfolio.filter_ecommerce')}
+          </button>
+          <button
+            type="button"
+            className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'restaurant'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
+              }`}
+            onClick={() => setFilter('restaurant')}
+          >
+            {t('portfolio.filter_restaurant')}
+          </button>
+          <button
+            type="button"
+            className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'immobilier'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
+              }`}
+            onClick={() => setFilter('immobilier')}
+          >
+            {t('portfolio.filter_immobilier')}
+          </button>
+          <button
+            type="button"
+            className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'landing'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
+              }`}
+            onClick={() => setFilter('landing')}
+          >
+            {t('portfolio.filter_landing')}
+          </button>
+          <button
+            type="button"
+            className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'sante'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400-hover:bg-blue-50 dark:hover:bg-slate-700'
+              }`}
+            onClick={() => setFilter('sante')}
+          >
+            {t('portfolio.filter_sante')}
+          </button>
+          <button
+            type="button"
+            className={`px-6 py-2.5 rounded-full font-medium transition-all ${filter === 'autre'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700'
+              }`}
+            onClick={() => setFilter('autre')}
+          >
+            {t('portfolio.filter_autre')}
+          </button>
         </div>
       </section>
 
-      <section className="py-12 pb-20">
+      <section className="py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
-              <PortfolioCard key={project.id} project={project} />
-            ))}
+          <div className="flex flex-col items-center mb-8 animate-on-scroll">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+              Our Portfolio
+            </h2>
           </div>
 
-          {filteredProjects.length === 0 && (
-            <div className="text-center py-20">
+          {filteredProjects.length > 0 ? (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {pagedProjects.map((project) => (
+                  <PortfolioCard key={project.id} project={project} />
+                ))}
+              </div>
+
+              <div className="flex justify-center mt-6 space-x-2">
+                <button
+                  type="button"
+                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 0))}
+                  className="px-3 py-1 rounded bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-800 disabled:opacity-50"
+                  disabled={currentPage === 0}
+                >
+                  Previous
+                </button>
+                <span className="text-sm text-slate-600 dark:text-slate-400">
+                  Page {currentPage + 1}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages - 1))}
+                  className="px-3 py-1 rounded bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-800"
+                  disabled={currentPage >= totalPages - 1}
+                >
+                  Next
+                </button>
+              </div>
+            </>
+          ) : (
+            <div className="text-center py-8">
               <p className="text-slate-500 dark:text-slate-500 text-lg">
                 {t('portfolio.no_projects')}
               </p>
@@ -353,8 +383,7 @@ const Portfolio = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
-};
+    </div>);
+}
 
 export default Portfolio;
