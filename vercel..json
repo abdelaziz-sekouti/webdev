@@ -1,8 +1,8 @@
 {
     "redirects": [
         {
-            "source": "/old-page",
-            "destination": "/new-page",
+            "source": "/old-pagehttps://webdev-theta-gray.vercel.app/*",
+            "destination": "/new-pagehttps://webdev-theta-gray.vercel.app/",
             "permanent": true
         }
     ]
