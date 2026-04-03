@@ -1,0 +1,23 @@
+# Vite/React project
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+
+# Build output
+dist/
+.next/
+
+# IDE files
+.vscode/
+.idea/
+
+# Other
+.DS_Store
+
+# Add project-specific files below if needed
+# .env.local
+# .env.test
+# .
