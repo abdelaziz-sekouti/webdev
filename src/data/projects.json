@@ -92,16 +92,16 @@
   },
   {
     "id": 8,
-    "title": "Blog Lifestyle",
-    "description": "Blog personnel sur le lifestyle avec articles, galerie photo et section de commentaires.",
+    "title": "Home Goods Store",
+    "description": "Website for a Home Goods Store Where Clients Could See What They Need As Furniture.",
     "image": "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?w=600&h=400&fit=crop",
     "tags": [
-      "Blog",
-      "Lifestyle",
+      "Home Goods",
+      "Ameublement",
       "Articles"
     ],
-    "category": "blog",
-    "url": "https://lifestyle-blog.vercel.app/"
+    "category": "webshop",
+    "url": "https://home-goods-store-ecru.vercel.app/"
   },
   {
     "id": 9,
