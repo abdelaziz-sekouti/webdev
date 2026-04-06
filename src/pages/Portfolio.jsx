@@ -68,7 +68,7 @@ const projectsData = [
       "Tourisme"
     ],
     "category": "voyage",
-    "url": "https://sahara-travel.vercel.app/"
+    "url": "https://agence-de-voyage-sahara.vercel.app/#/"
   },
   {
     "id": 8,
@@ -94,7 +94,7 @@ const projectsData = [
       "Galerie"
     ],
     "category": "autre",
-    "url": "https://artiste-portfolio.vercel.app/"
+    "url": "https://artist-portfolio-coral.vercel.app/"
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@ const projectsData = [
       "Suivi"
     ],
     "category": "sante",
-    "url": "https://fitness-app.vercel.app/"
+    "url": "https://fittrack-pro-zeta.vercel.app/"
   },
   {
     "id": 11,
@@ -133,7 +133,7 @@ const projectsData = [
       "Social"
     ],
     "category": "autre",
-    "url": "https://recipe-app.vercel.app/"
+    "url": "https://cookbook-omega-ebon.vercel.app/"
   },
   {
     "id": 13,
