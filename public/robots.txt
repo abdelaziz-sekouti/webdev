@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://webdev-theta-gray.vercel.app/sitemap.xml
