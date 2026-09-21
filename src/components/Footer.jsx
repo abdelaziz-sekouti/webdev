@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Github, Youtube, Instagram, Facebook } from 'lucide-react';
+import { Phone, Mail, MapPin, Github, Youtube, Instagram, Facebook,Music2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const socialLinks = [
@@ -22,6 +22,11 @@ const socialLinks = [
     name: 'Instagram',
     href: 'https://www.instagram.com/sekoutiabdelaziz/',
     bgColor: 'hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500',
+  },
+  {
+    name: 'Music2',
+    href: 'https://www.tiktok.com/@devweb.ma',
+    bgColor: 'hover:bg-gradient-to-br hover:from-black-600 hover:to-grey-500',
   },
 ];
 
