@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, Youtube, Instagram, Facebook ,FaTiktok} from 'lucide-react';
+import { Github, Youtube, Instagram, Facebook ,Music2} from 'lucide-react';
 
 const socialLinks = [
   {
@@ -31,9 +31,9 @@ const socialLinks = [
     bgHover: 'hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500',
   },
    {
-    name: 'FaTiktok',
+    name: 'Music2',
     href: 'https://www.tiktok.com/@devweb.ma',
-    Icon: FaTiktok,
+    Icon: Music2,
     color: 'hover:text-white',
     bgHover: 'hover:bg-gradient-to-br hover:from-black-600 hover:to-grey-500',
   },
