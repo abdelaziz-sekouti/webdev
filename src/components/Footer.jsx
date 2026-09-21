@@ -62,6 +62,7 @@ const Footer = () => {
                   {name === 'GitHub' && <Github className="w-5 h-5" />}
                   {name === 'YouTube' && <Youtube className="w-5 h-5" />}
                   {name === 'Instagram' && <Instagram className="w-5 h-5" />}
+                  {name === 'Music2' && <Music2 className="w-5 h-5" />}
                 </a>
               ))}
             </div>
