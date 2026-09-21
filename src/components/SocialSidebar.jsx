@@ -31,7 +31,7 @@ const socialLinks = [
     bgHover: 'hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500',
   },
    {
-    name: 'Tiktok',
+    name: 'TikTok',
     href: 'https://www.tiktok.com/@devweb.ma',
     Icon: TikTok,
     color: 'hover:text-white',
