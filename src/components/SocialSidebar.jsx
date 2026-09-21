@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, Youtube, Instagram, Facebook ,TikTok} from 'lucide-react';
+import { Github, Youtube, Instagram, Facebook ,Tiktok} from 'lucide-react';
 
 const socialLinks = [
   {
@@ -33,7 +33,7 @@ const socialLinks = [
    {
     name: 'Tiktok',
     href: 'https://www.tiktok.com/@devweb.ma',
-    Icon: TikTok,
+    Icon: Tiktok,
     color: 'hover:text-white',
     bgHover: 'hover:bg-gradient-to-br hover:from-black-600 hover:to-grey-500',
   },
